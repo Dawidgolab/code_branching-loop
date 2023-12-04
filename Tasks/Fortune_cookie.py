@@ -8,7 +8,7 @@ select = input("Do you want to take adventage of the prediction? (yes/no or y/n)
 while True:
     if select == "yes" or select == "y":
         cake = random.choice(cookie)
-        print(f"'{cake}' cookie")
+        print(f"You drew '{cake}' cookie")
         break
     elif  select == "no" or select == "n":
         print("Okey, thanks good bye!!!")
