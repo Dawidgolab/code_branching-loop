@@ -1,5 +1,15 @@
 import random
 
+def too_high(high,computerGuessNumber):
+    high = computerGuessNumber - 1
+    print("too high")
+    print("------------------------------------------------------------")
+    return high
+def too_low(low,computerGuessNumber):
+    low = computerGuessNumber + 1
+    print("too low")
+    print("------------------------------------------------------------")
+    return low
 
 myNumber = int(input("Give the number in range from 1 to 100: "))
 low = 0
@@ -12,15 +22,11 @@ while True:
     print(f"Attempt:{trials}. I'm thinking .....{computerGuessNumber}?")
 
     if computerGuessNumber < myNumber:
-        print("too low")
-        print("------------------------------------------------------------")
-        low = computerGuessNumber + 1
+        low = too_low(low,computerGuessNumber)
         continue
 
     elif computerGuessNumber > myNumber:
-        print("too high")
-        print("------------------------------------------------------------")
-        high = computerGuessNumber - 1
+        high = too_high(low,computerGuessNumber)
         continue
 
     else:
